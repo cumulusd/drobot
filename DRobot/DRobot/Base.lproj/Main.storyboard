@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DRBViewController" sceneMemberID="viewController">
@@ -15,11 +15,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-3Y-Fgy">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="DRobot" id="8AE-ui-N0R">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit Program" id="ZLC-sZ-viF">
+                                            <connections>
+                                                <action selector="editProgram:" destination="BYZ-38-t0r" id="JU8-DS-LAQ"/>
+                                                <segue destination="PN7-ZE-sh7" kind="modal" identifier="EditProgram" modalPresentationStyle="formSheet" id="Bta-iq-e7E"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Run" id="2Vd-f1-akD">
+                                            <connections>
+                                                <action selector="runProgram:" destination="BYZ-38-t0r" id="g5U-Fp-kkq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-Ny-yu3" customClass="DRBBoardView">
+                                <rect key="frame" x="0.0" y="64" width="768" height="789"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6W0-3Y-Fgy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0mf-tR-4TR"/>
+                            <constraint firstAttribute="trailing" secondItem="6W0-3Y-Fgy" secondAttribute="trailing" id="6Vv-hX-SKs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qGb-Ny-yu3" secondAttribute="bottom" constant="171" id="F0t-MC-nF7"/>
+                            <constraint firstItem="qGb-Ny-yu3" firstAttribute="leading" secondItem="6W0-3Y-Fgy" secondAttribute="leading" id="THo-kD-Lbd"/>
+                            <constraint firstItem="qGb-Ny-yu3" firstAttribute="top" secondItem="6W0-3Y-Fgy" secondAttribute="bottom" id="e2e-fS-yE9"/>
+                            <constraint firstItem="6W0-3Y-Fgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i9J-hZ-NO7"/>
+                            <constraint firstAttribute="centerX" secondItem="qGb-Ny-yu3" secondAttribute="centerX" id="zaN-Pe-vnX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barButtonEditProgram" destination="ZLC-sZ-viF" id="4md-UK-ygm"/>
+                        <outlet property="barButtonRunProgram" destination="2Vd-f1-akD" id="nOD-lN-kek"/>
+                        <outlet property="boardView" destination="qGb-Ny-yu3" id="EVC-25-dqT"/>
+                        <outlet property="navBar" destination="6W0-3Y-Fgy" id="F5B-ih-XEe"/>
+                        <outlet property="navItem" destination="8AE-ui-N0R" id="ZiL-q7-d9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Edit Program View Controller-->
+        <scene sceneID="eDz-94-gge">
+            <objects>
+                <viewController id="PN7-ZE-sh7" customClass="DRBEditProgramViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jNb-dE-yvX"/>
+                        <viewControllerLayoutGuide type="bottom" id="L32-Y9-tEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVy-7X-Lgw">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-Xo-a5o">
+                                <rect key="frame" x="0.0" y="74" width="540" height="546"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="546" id="eZz-yq-nDU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14D-ZO-NLL">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="74"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem prompt="Write Your Program Below" id="E1p-BQ-9Wm">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hDR-El-Oiq">
+                                            <connections>
+                                                <action selector="didPressDoneButton:" destination="PN7-ZE-sh7" id="JkE-Bh-0bA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Yf5-Xo-a5o" secondAttribute="bottom" id="AsK-IC-pnv"/>
+                            <constraint firstItem="Yf5-Xo-a5o" firstAttribute="trailing" secondItem="14D-ZO-NLL" secondAttribute="trailing" id="KMJ-TE-7Ne"/>
+                            <constraint firstItem="Yf5-Xo-a5o" firstAttribute="leading" secondItem="hVy-7X-Lgw" secondAttribute="leading" id="Qw8-wr-Juv"/>
+                            <constraint firstAttribute="trailing" secondItem="Yf5-Xo-a5o" secondAttribute="trailing" id="hIQ-rp-hxN"/>
+                            <constraint firstItem="Yf5-Xo-a5o" firstAttribute="leading" secondItem="14D-ZO-NLL" secondAttribute="leading" id="kQI-Et-lkV"/>
+                            <constraint firstItem="Yf5-Xo-a5o" firstAttribute="top" secondItem="14D-ZO-NLL" secondAttribute="bottom" id="nLE-51-8yn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barButtonDone" destination="hDR-El-Oiq" id="Md6-dU-eVX"/>
+                        <outlet property="txtSource" destination="Yf5-Xo-a5o" id="Djq-Dv-RqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgX-a1-5qA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="-71"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

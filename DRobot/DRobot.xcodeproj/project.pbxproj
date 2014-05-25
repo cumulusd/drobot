@@ -21,6 +21,11 @@
 		552E4BC818FCC75200DD905D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552E4BAA18FCC75200DD905D /* UIKit.framework */; };
 		552E4BD018FCC75200DD905D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 552E4BCE18FCC75200DD905D /* InfoPlist.strings */; };
 		552E4BD218FCC75200DD905D /* DRobotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 552E4BD118FCC75200DD905D /* DRobotTests.m */; };
+		5533F74B190759D1005C10EF /* DRBEditProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533F74A190759D1005C10EF /* DRBEditProgramViewController.m */; };
+		5533F74E190DB728005C10EF /* DRBBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533F74D190DB728005C10EF /* DRBBoardView.m */; };
+		5533F751190DCA53005C10EF /* DRBRobotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533F750190DCA53005C10EF /* DRBRobotView.m */; };
+		5533F754191081A4005C10EF /* DRBSourceCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533F753191081A4005C10EF /* DRBSourceCodeManager.m */; };
+		5533F75719153AD7005C10EF /* DRBCodeRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533F75619153AD7005C10EF /* DRBCodeRunner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		552E4BCD18FCC75200DD905D /* DRobotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DRobotTests-Info.plist"; sourceTree = "<group>"; };
 		552E4BCF18FCC75200DD905D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		552E4BD118FCC75200DD905D /* DRobotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRobotTests.m; sourceTree = "<group>"; };
+		5533F749190759D1005C10EF /* DRBEditProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBEditProgramViewController.h; sourceTree = "<group>"; };
+		5533F74A190759D1005C10EF /* DRBEditProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBEditProgramViewController.m; sourceTree = "<group>"; };
+		5533F74C190DB728005C10EF /* DRBBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBBoardView.h; sourceTree = "<group>"; };
+		5533F74D190DB728005C10EF /* DRBBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBBoardView.m; sourceTree = "<group>"; };
+		5533F74F190DCA53005C10EF /* DRBRobotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBRobotView.h; sourceTree = "<group>"; };
+		5533F750190DCA53005C10EF /* DRBRobotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBRobotView.m; sourceTree = "<group>"; };
+		5533F752191081A4005C10EF /* DRBSourceCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBSourceCodeManager.h; sourceTree = "<group>"; };
+		5533F753191081A4005C10EF /* DRBSourceCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBSourceCodeManager.m; sourceTree = "<group>"; };
+		5533F75519153AD7005C10EF /* DRBCodeRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBCodeRunner.h; sourceTree = "<group>"; };
+		5533F75619153AD7005C10EF /* DRBCodeRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBCodeRunner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +130,18 @@
 				552E4BB518FCC75200DD905D /* DRBAppDelegate.h */,
 				552E4BB618FCC75200DD905D /* DRBAppDelegate.m */,
 				552E4BB818FCC75200DD905D /* Main.storyboard */,
+				5533F749190759D1005C10EF /* DRBEditProgramViewController.h */,
+				5533F74A190759D1005C10EF /* DRBEditProgramViewController.m */,
+				5533F752191081A4005C10EF /* DRBSourceCodeManager.h */,
+				5533F753191081A4005C10EF /* DRBSourceCodeManager.m */,
 				552E4BBB18FCC75200DD905D /* DRBViewController.h */,
 				552E4BBC18FCC75200DD905D /* DRBViewController.m */,
+				5533F75519153AD7005C10EF /* DRBCodeRunner.h */,
+				5533F75619153AD7005C10EF /* DRBCodeRunner.m */,
+				5533F74C190DB728005C10EF /* DRBBoardView.h */,
+				5533F74D190DB728005C10EF /* DRBBoardView.m */,
+				5533F74F190DCA53005C10EF /* DRBRobotView.h */,
+				5533F750190DCA53005C10EF /* DRBRobotView.m */,
 				552E4BBE18FCC75200DD905D /* Images.xcassets */,
 				552E4BAD18FCC75200DD905D /* Supporting Files */,
 			);
@@ -251,8 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				552E4BB318FCC75200DD905D /* main.m in Sources */,
+				5533F754191081A4005C10EF /* DRBSourceCodeManager.m in Sources */,
 				552E4BB718FCC75200DD905D /* DRBAppDelegate.m in Sources */,
+				5533F74E190DB728005C10EF /* DRBBoardView.m in Sources */,
 				552E4BBD18FCC75200DD905D /* DRBViewController.m in Sources */,
+				5533F74B190759D1005C10EF /* DRBEditProgramViewController.m in Sources */,
+				5533F751190DCA53005C10EF /* DRBRobotView.m in Sources */,
+				5533F75719153AD7005C10EF /* DRBCodeRunner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +489,7 @@
 				552E4BD718FCC75200DD905D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		552E4BD818FCC75200DD905D /* Build configuration list for PBXNativeTarget "DRobotTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +498,7 @@
 				552E4BDA18FCC75200DD905D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
